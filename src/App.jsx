@@ -5,12 +5,14 @@ import { Experience } from "@/sections/Experience";
 import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
 import { Navbar } from "./layout/Navbar";
+import MusicComponent from "./layout/MusicComponent";
 
 function App() {
  
   return (
    <div className="min-h-screen overflow-x-hidden">
     <Navbar/>
+    <MusicComponent/>
     <main>
       <Hero/>
       <About/>
