@@ -7,30 +7,30 @@ const highlights = [
     icon: Code2,
     title: "Clean Code",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Writing clear, maintainable code that scales over time.",
   },
   {
     icon: Rocket,
     title: "Performance",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Building fast, responsive experiences optimized for speed.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    description: "Working closely with teams to turn ideas into reality.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Exploring modern technologies and best development practices.",
   },
     {
     icon: Palette,
     title: "Designing",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Creating intuitive, user-focused interfaces with purpose.",
   }
 ];
 
@@ -76,7 +76,7 @@ export const About = () => {
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Hi !
-              <span className="font-serif italic font-normal text-white">
+              <span className="font-normal text-white">
                 {" "}
                 Im Cheroshena.
               </span>
@@ -99,8 +99,8 @@ export const About = () => {
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-              <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not only functional, but genuinely delightful—products that users enjoy using and developers find easy to maintain."
+              <p className="text-lg font-medium text-foreground">
+                "My mission is to craft digital experiences that go beyond functionality products that feel intuitive to users and elegant for developers to build and maintain."
               </p>
             </div>
           </div>

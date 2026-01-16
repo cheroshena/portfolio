@@ -105,7 +105,7 @@ export const Hero = () => {
             <div className="relative max-w-md max-auto">
 
               {/* BG Gradient */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to primary/10 blur-2x animate-pulse-glow"/>
+              {/* <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to primary/10 blur-2x animate-pulse-glow"/> */}
               <div className="relative ">
                 <img src="/profile-photo.png" alt="Fernando Cheroshena" className="w-full aspect-[4/5] object-cover" />
 
