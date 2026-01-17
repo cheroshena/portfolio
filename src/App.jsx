@@ -6,6 +6,7 @@ import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
 import { Navbar } from "./layout/Navbar";
 import MusicComponent from "./layout/MusicComponent";
+import { Footer } from "./layout/Footer";
 
 function App() {
  
@@ -20,8 +21,8 @@ function App() {
       <Experience/>
       <Testimonials/>
       <Contact/>
-
     </main>
+    <Footer/>
 
    </div>
   )

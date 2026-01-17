@@ -7,7 +7,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  // { href: "#testimonials", label: "Testimonials" },
 ];
 
 export const Navbar = () => {
@@ -31,8 +31,8 @@ export const Navbar = () => {
   return (
     <header className={`${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} fixed top-0 left-0 transition-all duration-50 right-0 z-50`}>
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-light hover:text-primary">
-          CHERA <span>.</span>
+        <a href="#" className="text-xl font-bold tracking-light hover:text-primary ">
+          Cheroshena.
         </a>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
@@ -43,9 +43,9 @@ export const Navbar = () => {
           </div>
         </div>
         {/* CTA Button */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <Button size="sm">Contact Me</Button>
-        </div>
+        </div> */}
         {/* Mobile Menu Button */}
         <button className="md:hidden p-2 text-foreground cursor-pointer" onClick={() => setMobileMenuOpen((prev) => !prev)}>
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -61,12 +61,15 @@ export const Navbar = () => {
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
                 href={link.href}
                 key={index}
-                onClick={()=>setMobileMenuOpen(false)}
-                >{link.label}
-                
+                onClick={() => setMobileMenuOpen(false)}
+              >{link.label}
+
               </a>
             ))}
-            <Button size="sm">Contact Me</Button>
+            <Button size="sm" onClick={() => {
+              const el = document.getElementById("contact");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}  >Contact Me</Button>
           </div>
         </div>
       )}

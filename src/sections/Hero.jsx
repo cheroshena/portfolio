@@ -4,6 +4,7 @@ import { Button } from "../components/Button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { Download } from "lucide-react";
 import { Github, Linkedin, } from "lucide-react";
+import Resume from "/fernando-cheroshena.pdf"
 
 const skills = [
   "React.js",
@@ -19,6 +20,7 @@ const skills = [
 ]
 
 export const Hero = () => {
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* BG */}
@@ -47,7 +49,7 @@ export const Hero = () => {
                 top: `${Math.random() * 100}%`,
                 transform: `rotate(${Math.random() * 360}deg)`,
 
-                animation: `slow-drift ${25 + Math.random() * 20}s ease-in-out infinite`,
+                animation: `slow-drift ${25 + Math.random() * 5}s ease-in-out infinite`,
                 animationDelay: `${Math.random() * 5}s`,
               }}
             />
@@ -71,7 +73,7 @@ export const Hero = () => {
             </div>
             {/* HeadLine */}
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl lg:text-7xl leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-3xl md:text-4xl lg:text-7xl leading-tight animate-fade-in animation-delay-100 ">
                 Design driven.<span className="text-primary glow-text"> Performance focused. </span>
                 <br />
                 Built for real users.
@@ -81,9 +83,11 @@ export const Hero = () => {
               </p>
             </div>
             {/* CTA Button */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button>
-              <AnimatedBorderButton><Download />DownLoad</AnimatedBorderButton>
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300 ">
+              {/* <Button href="#contact" size="lg">Contact Me <ArrowRight className="w-5 h-5 cursor-pointer" /></Button> */}
+              <a className="cursor-pointer" href={Resume} download={Resume}>
+              <AnimatedBorderButton className='cursor-pointer'><Download />DownLoad</AnimatedBorderButton>
+              </a>
             </div>
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
@@ -95,7 +99,7 @@ export const Hero = () => {
                 { icon: Linkedin, href: "https://www.linkedin.com/in/fernando-cheroshena-264447250/" },
 
               ].map((social, idx) => (
-                <a className="p-2 rounded-full glass hover:primary/10 hover:text-primary transition-all duration-300" key={idx} href={social.href}>{<social.icon className="w-7 h-7" />}</a>
+                <a className="p-2 w-12 h-12 flex items-center justify-center glass hover:primary/10 hover:text-primary transition-all duration-300 clip-hexagon" key={idx} href={social.href}>{<social.icon className="w-7 h-7" />}</a>
               ))}
             </div>
           </div>
